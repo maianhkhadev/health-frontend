@@ -8,7 +8,8 @@ import {
   Tooltip,
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
-import { Section, Header, Main, Footer } from './styles'
+import { Button } from 'antd'
+import { Section, Header, Main, Footer, Title, Date } from './styles'
 import dataSource from '../../../mockData/records'
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Tooltip)
@@ -71,10 +72,37 @@ const data = {
 }
 
 const SectionBodyRecord: React.FC = () => (
-  <Section>
+  <Section id="section-1">
+    <Header>
+      <Title>
+        Body
+        <br />
+        Record
+      </Title>
+      <Date>2021.05.21</Date>
+    </Header>
+
     <Main>
       <Line options={options} data={data} />
     </Main>
+
+    <Footer>
+      <Button shape="round" size="small">
+        日
+      </Button>
+
+      <Button shape="round" size="small">
+        週
+      </Button>
+
+      <Button shape="round" size="small">
+        月
+      </Button>
+
+      <Button type="primary" shape="round" size="small">
+        年
+      </Button>
+    </Footer>
   </Section>
 )
 

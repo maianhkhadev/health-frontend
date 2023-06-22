@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import PrivateRoute from './components/PrivateRoute'
 import Welcome from './pages/Welcome'
 import Signin from './pages/Signin'
 import Dashboard from './pages/Dashboard'
@@ -11,9 +12,23 @@ const App: React.FC = () => (
 
     <Route path="/sign-in" element={<Signin />} />
 
-    <Route path="/dashboard" element={<Dashboard />} />
+    <Route
+      path="/dashboard"
+      element={
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      }
+    />
 
-    <Route path="/my-record" element={<Record />} />
+    <Route
+      path="/my-record"
+      element={
+        <PrivateRoute>
+          <Record />
+        </PrivateRoute>
+      }
+    />
   </Routes>
 )
 

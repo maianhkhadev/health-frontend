@@ -7,7 +7,7 @@ export const Item = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: #000000;
+    background-color: #3d3d3d;
   }
 `
 

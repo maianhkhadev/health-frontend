@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import type { MenuProps } from 'antd'
-import { Button, Dropdown } from 'antd'
+import { Dropdown } from 'antd'
+import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
+import ButtonDark from '../../../../components/Buttons/Dark'
+import { Trigger } from './styles'
+import './styles.css'
 
 const items: MenuProps['items'] = [
   {
@@ -31,8 +35,15 @@ const items: MenuProps['items'] = [
 ]
 
 const DropdownMenu: React.FC = () => (
-  <Dropdown menu={{ items }}>
-    <Button>bottomLeft</Button>
+  <Dropdown
+    menu={{ items }}
+    overlayClassName="dark-mode"
+    placement="bottomRight"
+  >
+    <Trigger>
+      <ButtonDark className="hide" icon={<MenuOutlined />} size="large" />
+      <ButtonDark className="show" icon={<CloseOutlined />} size="large" />
+    </Trigger>
   </Dropdown>
 )
 

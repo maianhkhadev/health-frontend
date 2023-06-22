@@ -27,6 +27,7 @@ export const Title = styled.h4`
   color: #414141;
   font-size: 1.375rem;
   font-family: 'Inter';
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 1.75rem;
   letter-spacing: 0.11px;

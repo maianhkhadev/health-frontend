@@ -1,11 +1,20 @@
 import styled from 'styled-components'
 
-export const FlexBetween = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
+export const Trigger = styled.div`
+  align-self: center;
+  margin-left: 1rem;
 
-export const NavBar = styled.div`
-  display: flex;
+  .show {
+    display: none;
+  }
+
+  &.ant-dropdown-open {
+    .hide {
+      display: none;
+    }
+
+    .show {
+      display: inline-block;
+    }
+  }
 `

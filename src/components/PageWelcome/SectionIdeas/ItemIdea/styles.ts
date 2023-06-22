@@ -13,6 +13,7 @@ export const Title = styled.h6`
   color: #FFCC21;
   font-size: 1.375rem;
   font-family: 'Inter';
+  font-weight: 400;
   line-height: 1.688rem;
   letter-spacing: 0.11px;
   margin-top: 0;

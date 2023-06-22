@@ -10,6 +10,7 @@ const FormSignin: React.FC = () => {
     const values = await form.validateFields()
 
     if (values.email === 'admin@gmail.com' && values.password === 'admin123') {
+      window.sessionStorage.setItem('token', '123')
       navigate('/dashboard')
       return
     }

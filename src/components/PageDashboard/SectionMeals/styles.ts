@@ -7,10 +7,19 @@ export const Section = styled.section`
 export const Header = styled.header`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 4rem;
+  grid-gap: 1.5rem 4rem;
   width: 45.5rem;
   text-align: center;
   margin: -2rem auto 1.5rem;
+
+  @media screen and (min-width: 600px) and (max-width: 1200px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
+    width: 20rem;
+  }
 `
 
 export const Main = styled.main`

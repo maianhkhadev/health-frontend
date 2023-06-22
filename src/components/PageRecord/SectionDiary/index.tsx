@@ -5,7 +5,7 @@ import { Section, Header, Main, Footer, Title } from './styles'
 import dataSource from '../../../mockData/diary'
 
 const SectionDiary: React.FC = () => (
-  <Section>
+  <Section id="section-3">
     <Header>
       <Title>My Diary</Title>
     </Header>
