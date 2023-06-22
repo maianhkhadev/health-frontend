@@ -1,16 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Badge } from 'antd'
 import { Item, Icon, Text } from './styles'
 
 type IParams = {
   src: string
   text: string
-  moveTo: string
+  notification?: number
 }
 
-const NavItem: React.FC<IParams> = ({ src, text, moveTo }) => (
+const NavItem: React.FC<IParams> = ({ src, text, notification }) => (
   <Item>
-    <Icon src={src} />
+    {notification ? (
+      <Badge count={notification} size="small">
+        <Icon src={src} />
+      </Badge>
+    ) : (
+      <Icon src={src} />
+    )}
+
     <Text>{text}</Text>
   </Item>
 )

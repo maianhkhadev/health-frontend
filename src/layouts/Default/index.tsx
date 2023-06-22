@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonBackTo from '../../components/Buttons/BackTo'
 import HeaderContent from './HeaderContent'
 import FooterContent from './FooterContent'
 import { Section, Header, Main, Footer, Container } from './styles'
@@ -27,6 +28,8 @@ const Default: React.FC<IParams> = ({ extraSection, children }) => (
         <FooterContent />
       </Container>
     </Footer>
+
+    <ButtonBackTo />
   </Section>
 )
 

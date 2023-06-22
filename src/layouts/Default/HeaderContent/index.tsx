@@ -17,12 +17,12 @@ const HeaderContent: React.FC = () => (
     <NavBar>
       <NavItems>
         <Link to="/my-record">
-          <NavItem src={icon1} text="自分の記録" moveTo="" />
+          <NavItem src={icon1} text="自分の記録" />
         </Link>
 
-        <NavItem src={icon2} text="チャレンジ" moveTo="" />
+        <NavItem src={icon2} text="チャレンジ" />
 
-        <NavItem src={icon3} text="お知らせ" moveTo="" />
+        <NavItem src={icon3} text="お知らせ" notification={1} />
       </NavItems>
 
       <DropdownMenu />
